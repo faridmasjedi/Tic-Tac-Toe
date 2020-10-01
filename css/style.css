@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+  box-sizing: border-box;
+  border-radius: 15px;
+  font-family: 'Bangers', cursive;
+  font-size:30px;
+}
+
+body {
+  background-color: #ccc;
+  background-image: url('../image/image1.png' );
+  background-size:125%;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+
+h1 {
+  font-size:50px;
+  margin-top: 0;
+  height:100px;
+  line-height: 100px;
+  text-align:center;
+  background-color: #e17878;
+}
+
+#container1 {
+  max-width: 800px;
+  margin: 0 auto;
+  height:600px;
+}
+
+#play{
+  padding:200px;
+}
+#play button{
+  display:block;
+  width: 75%;
+  height:100px;
+  margin:10px auto;
+  font-size:30px;
+}
+
+#container2 ,#container3 {
+  margin: 0 auto;
+  max-width: 960px;
+  text-align:center;
+  display:none;
+  height:600px;
+  padding-top: 17px;
+
+}
+
+#firstPlayer , #secondPlayer {
+  width: 25%;
+  height: 40%;
+  display:inline-block;
+  margin:80px;
+  vertical-align: top;
+  margin-top:35px;
+  padding:10px;
+  text-align:center;
+  background-color: #e17878;
+}
+
+input, button{
+  padding:10px;
+  font-size:20px;
+  margin:5px;
+  text-align:center;
+}
+input{
+  width:75%;
+}
+#whoIsFirstPlayer{
+  background-color: aliceblue;
+  height:180px;
+  width:563px;
+  margin:0 auto;
+  padding:10px;
+}
+
+.cellDemo{
+  display:inline-block;
+  width:50px;
+  height: 50px;
+  line-height: 50px;
+  border:red 1px solid;
+  font-size:35px;
+}
+.cellDemo:hover{
+  background-color: #e17878;
+  color: aliceblue;
+}
+
+#signChoose {
+  display:none;
+}
+#signChoose {
+  padding:12px;
+}
+#X , #O{
+  margin-top: -60px ;
+}
+
+#container3 {
+  background-color: aliceblue;
+}
+
+#container3 #firstPlayer , #container3 #secondPlayer{
+  width: 100%;
+  height: 260px;
+  margin: 3px;
+  margin-top: -117px;
+  padding: 10px;
+  text-align: center;
+  background-color: #e17878;
+  display:block;
+}
+#player-name-result {
+  width: 19%;
+  display: inline-block;
+  vertical-align: middle;
+}
+#result1 , #result2{
+  width: 35%;
+  margin: 25px;
+  /* display: block; */
+  position: relative;
+  top: -95px;
+  left: 5px;
+  padding: 10px;
+  display:none;
+}
+#matrix {
+  margin:8px;
+  width:52%;
+  display:inline-block;
+}
+#matrix .cell{
+  font-size:100px;
+}
+
+.rows {
+text-align:center;
+margin:3px;
+}
+.cell {
+  display:inline-block;
+  width:30%;
+  height: 150px;
+  line-height: 150px;
+  border:red 4px solid;
+  vertical-align: top;
+}
+
+#round {
+  font-size: 20px;
+  width: 500px;
+  padding: 0px;
+  display: inline-block;
+  margin-top: 235px;
+}
+#round input {
+  width: 26%;
+  text-align:center;
+}
+#gameComment{
+  height:100px;
+  display:none;
+  font-size:50px;
+  margin-top:25px;
+  color: #bc7f7f;
+}
+
+#render{
+  display:none;
+}
+#render:hover{
+  background-color:#ddd;
+}
