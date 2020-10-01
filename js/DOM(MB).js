@@ -127,7 +127,6 @@ $(document).ready( function () {
       // the iteration counter for checking if all the boxes has been chosen -
       // or not.
       iteration += 1;
-
       // this 'playingRounds' function will check who is the winner of all round.
       // this has been defined in the Gamejs(MB).js.
       let gameContinue = gameObj.playingRounds(playerSign,playerChoice,rounds,iteration);

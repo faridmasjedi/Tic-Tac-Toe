@@ -127,9 +127,7 @@ const gameObj = {
            player2Score += 1;
          }
        }
-       if (iteration === 9) {
-         toPrintOut = 'Tie';
-       }
+
        if ( roundCounter === roundsNumber ) {
          if (player1Score > player2Score){
            toPrintOut = `${player1} Won the game.`;
@@ -138,6 +136,8 @@ const gameObj = {
          }else{
            toPrintOut = 'Tied game';
          }
+       }else if (iteration === 9) {
+         toPrintOut = 'Tie';
        }
      }
 
