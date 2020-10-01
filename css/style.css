@@ -181,13 +181,3 @@ margin:3px;
 #render:hover{
   background-color:#ddd;
 }
-
-@media (max-width: 360px) {
-  * {
-    font-size:10px;
-  }
-  #play {
-    padding: 20px;
-  }
-
-}
