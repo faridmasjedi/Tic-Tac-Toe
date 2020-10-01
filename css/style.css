@@ -7,6 +7,7 @@
   font-size:30px;
 }
 
+
 body {
   background-color: #ccc;
   background-image: url('../image/image1.png' );
@@ -68,6 +69,7 @@ input, button{
   font-size:20px;
   margin:5px;
   text-align:center;
+
 }
 input{
   width:75%;
@@ -178,4 +180,14 @@ margin:3px;
 }
 #render:hover{
   background-color:#ddd;
+}
+
+@media (max-width: 360px) {
+  * {
+    font-size:10px;
+  }
+  #play {
+    padding: 20px;
+  }
+
 }

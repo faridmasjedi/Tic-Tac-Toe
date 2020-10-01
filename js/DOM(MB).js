@@ -134,7 +134,7 @@ $(document).ready( function () {
 
       // check if one round does not finished and if it is, gonna show the message.
       if (!gameContinue[0]){
-        if (gameContinue[1] === "" && gameContinue[0]){
+        if (gameContinue[1] === "Tie"){
           $(this).text(playerSign);
           $('#gameComment').text('Tie in this round').fadeIn(
             function(){
@@ -153,7 +153,7 @@ $(document).ready( function () {
               });
             });
 
-        }else if (gameContinue[1] !== '') {
+        }else{
           $('#result1').text(gameContinue[2]);
           $('#result2').text(gameContinue[3]);
           $('#gameComment').text(gameContinue[1])
