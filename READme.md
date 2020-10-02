@@ -38,4 +38,4 @@ I made two JavaScript files, *DOM(MB).js* and *Gamejs(MB).js*. The DOM(MB) is fo
 
 * <ins>Gamejs(MB).js</ins> : i made an object named gameObj which can make the matrix shape of three row arrays. there is a function which can choose who is going to be the first player by simple `Math.random()` function. There is one key named memory, which can save the numbers which has been chosen by players. And there is one key named *playingRounds* which deals with the rounds and how to figure out is there any winner or the game has been tied.
 
-* <ins>DOM(MB).js</ins> : At first i made one function which used to render the game. At the second page, i used some jQuery functions like `fadeIn()``fadeOut``delay``clone()` and others to make animations.
+* <ins>DOM(MB).js</ins> : At first i made one function which used to render the game. At the second page, i used some jQuery functions like `fadeIn()` `fadeOut` `delay` `clone()` and others to make animations.
