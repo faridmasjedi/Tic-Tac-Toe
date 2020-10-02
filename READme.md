@@ -8,6 +8,9 @@ Making a Tic-Tac-Toe game is the first project in software engineering immersive
 
 
 ### How can play this
+
+##### [https://faridmasjedi.github.io/Tic-Tac-Toe/](https://faridmasjedi.github.io/Tic-Tac-Toe/)
+
 1. Press the 'Player1 VS. Player2' button.
 
 2. Enter your names and then click the 'Submit' button. (note: there is a random function which show us who is the first player.)
