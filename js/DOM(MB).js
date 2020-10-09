@@ -101,9 +101,6 @@ $(document).ready( function () {
   // wants to play.
   const howManyRounds = function(){
     $('#round button').on('click', function() {
-      if $('#round input').val().isEmpty() !== false {
-
-
       $('#round').fadeOut(1000, function() {
         roundsNumber = +$('#round input').val();
         $('#container3 .name').fadeIn(1000);
@@ -116,9 +113,8 @@ $(document).ready( function () {
         $('#gameComment').text('');
         $('#gameComment').show();
       });
-    }
-  });
-}
+    });
+  }
   howManyRounds();
 
   // this function will check is the situation of a game in one round.
