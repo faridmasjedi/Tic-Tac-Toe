@@ -101,18 +101,22 @@ $(document).ready( function () {
   // wants to play.
   const howManyRounds = function(){
     $('#round button').on('click', function() {
-      $('#round').fadeOut(1000, function() {
-        roundsNumber = +$('#round input').val();
-        $('#container3 .name').fadeIn(1000);
-        $('#container3 #matrix').fadeIn(1000);
+      if ($('#round input').val() !== ''){
+        $('#round').fadeOut(1000, function() {
+          roundsNumber = +$('#round input').val();
+          $('#container3 .name').fadeIn(1000);
+          $('#container3 #matrix').fadeIn(1000);
 
-        // This is the winning counter box, shows the win count for -
-        // each player.
-        $('#container3 #result1').fadeIn(1000);
-        $('#container3 #result2').fadeIn(1000);
-        $('#gameComment').text('');
-        $('#gameComment').show();
-      });
+          // This is the winning counter box, shows the win count for -
+          // each player.
+          $('#container3 #result1').fadeIn(1000);
+          $('#container3 #result2').fadeIn(1000);
+          $('#gameComment').text('');
+          $('#gameComment').show();
+        });
+      }else{
+        alert('This should be field by a number')
+      }
     });
   }
   howManyRounds();
@@ -162,7 +166,7 @@ $(document).ready( function () {
           $('.cell').off('click');
         }
       }
-      $(this).off('click');
+      // $(this).off('click');
 
     });
   }
