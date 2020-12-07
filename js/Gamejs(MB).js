@@ -33,7 +33,7 @@ const gameObj = {
     return [first,second];
   },
 
-  // simple function for determining what is the secon player sign is.
+  // simple function for determining what is the second player sign is.
   secondPlayerSign: function (player1Sign){
     let player2Sign = 'O';
     if (player1Sign === "O"){
