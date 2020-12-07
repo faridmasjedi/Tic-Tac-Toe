@@ -15,6 +15,9 @@ const render = function(){
   hasChosenArray = [];
   gameObj.cells = ['1','2','3','4','5','6','7','8','9'];
   $('.cell').text('');
+  for (i=0; i<9; i++){
+    $('.cell').eq(i).attr('id',`cell${i+1}`)
+  }
   $('.cell').on('click');
 }
 
@@ -101,7 +104,8 @@ $(document).ready( function () {
   // wants to play.
   const howManyRounds = function(){
     $('#round button').on('click', function() {
-      if ($('#round input').val() !== ''){
+      let $rounds_input = $('#round input').val();
+      if ( ($rounds_input !== '') && !isNaN($rounds_input) ){
         $('#round').fadeOut(1000, function() {
           roundsNumber = +$('#round input').val();
           $('#container3 .name').fadeIn(1000);
@@ -124,51 +128,64 @@ $(document).ready( function () {
   // this function will check is the situation of a game in one round.
   const cellClick = function(){
     $('.cell').on('click' , function(){
-      let cellId = $(this).attr('id');
-      let playerChoice = cellId[cellId.length-1];
-      $(this).text(playerSign);
+      if ($(this).attr('id')!=='clicked'){
+        let cellId = $(this).attr('id');
+        let playerChoice = cellId[cellId.length-1];
+        $(this).text(playerSign);
+        $(this).attr('id','clicked');
 
-      // the iteration counter for checking if all the boxes has been chosen -
-      // or not.
-      iteration += 1;
-      // this 'playingRounds' function will check who is the winner of all round.
-      // this has been defined in the Gamejs(MB).js.
-      let gameContinue = gameObj.playingRounds(playerSign,playerChoice,rounds,iteration);
 
-      // check if one round does not finished and if it is, gonna show the message.
-      if (!gameContinue[0]){
-        if (gameContinue[1] === "Tie"){
-          $(this).text(playerSign);
-          $('#gameComment').text('Tie in this round').fadeIn(
-            function(){
-              $(this).fadeOut(1000,function(){
-                render();
+        // the iteration counter for checking if all the boxes has been chosen -
+        // or not.
+        iteration += 1;
+        // this 'playingRounds' function will check who is the winner of all round.
+        // this has been defined in the Gamejs(MB).js.
+        let gameContinue = gameObj.playingRounds(playerSign,playerChoice,rounds,iteration);
+        // check if one round does not finished and if it is, gonna show the message.
+        if (!gameContinue[0]){
+          if (gameContinue[1] === "Tie"){
+
+            $(this).text(playerSign);
+
+            $('#gameComment').text('Tie in this round').fadeIn(
+              function(){
+                $(this).fadeOut(1000,function(){
+                  render();
+                });
               });
-            });
 
-        }else if (gameContinue[1] === ""){
-          $('#result1').text(gameContinue[2]);
-          $('#result2').text(gameContinue[3]);
-          $('#gameComment').text(`${player} is the Winner of this round.`)
-            .fadeIn(1000, function (){
-              $(this).fadeOut(2000,function(){
-                render();
+          }else if (gameContinue[1] === ""){
+
+            $('#result1').text(gameContinue[2]);
+            $('#result2').text(gameContinue[3]);
+
+            $('#gameComment').text(`${player} is the Winner of this round.`)
+              .fadeIn(1000, function (){
+                $(this).fadeOut(2000,function(){
+                  render();
+                });
               });
-            });
 
-        }else{
-          $('#result1').text(gameContinue[2]);
-          $('#result2').text(gameContinue[3]);
-          $('#gameComment').text(gameContinue[1])
-            .fadeIn(1000, function (){
-              $('#render').fadeIn(1000);
-            })
-          $('.cell').off('click');
+          }else{
+            $('#result1').text(gameContinue[2]);
+            $('#result2').text(gameContinue[3]);
+
+            $('#gameComment').text(gameContinue[1])
+              .fadeIn(1000, function (){
+                $('#render').fadeIn(1000);
+                $('#refresh').fadeIn(1000);
+
+              })
+          }
+          for (i=0; i<9; i++){
+            $('.cell').eq(i).attr('id','clicked')
+          }
         }
-      }
-      // $(this).off('click');
 
-    });
+      }
+
+      });
+
   }
   cellClick();
 
@@ -180,6 +197,7 @@ $(document).ready( function () {
 
   $('#render').on('click', function() {
     render();
+    $('#refresh').css('display','none');
     $(this).fadeOut(1000);
     $('#gameComment').hide();
 
@@ -228,4 +246,7 @@ $(document).ready( function () {
     cellClick();
   });
 
+  $('#refresh').on('click', function(){
+    location.reload(true);
+  })
 });

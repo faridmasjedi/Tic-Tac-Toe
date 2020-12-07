@@ -175,9 +175,12 @@ margin:3px;
   color: #bc7f7f;
 }
 
-#render{
+#render, #refresh{
   display:none;
 }
 #render:hover{
+  background-color:#ddd;
+}
+#refresh:hover{
   background-color:#ddd;
 }
