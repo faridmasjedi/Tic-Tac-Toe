@@ -36,8 +36,8 @@ h1 {
 }
 #play button{
   display:block;
-  width: 75%;
-  height:100px;
+  /* width: 75%; */
+  height:115px;
   margin:10px auto;
   font-size:30px;
 }
@@ -56,7 +56,7 @@ h1 {
   width: 25%;
   height: 40%;
   display:inline-block;
-  margin:80px;
+  margin:10%;
   vertical-align: top;
   margin-top:35px;
   padding:10px;
@@ -77,7 +77,7 @@ input{
 #whoIsFirstPlayer{
   background-color: aliceblue;
   height:180px;
-  width:563px;
+  max-width:563px;
   margin:0 auto;
   padding:10px;
 }
@@ -127,7 +127,6 @@ input{
 #result1 , #result2{
   width: 35%;
   margin: 25px;
-  /* display: block; */
   position: relative;
   top: -95px;
   left: 5px;
@@ -140,12 +139,12 @@ input{
   display:inline-block;
 }
 #matrix .cell{
-  font-size:100px;
+  font-size:80px;
 }
 
 .rows {
-text-align:center;
-margin:3px;
+  text-align:center;
+  margin:3px;
 }
 .cell {
   display:inline-block;
@@ -170,7 +169,7 @@ margin:3px;
 #gameComment{
   height:100px;
   display:none;
-  font-size:50px;
+  font-size:35px;
   margin-top:25px;
   color: #bc7f7f;
 }
