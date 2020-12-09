@@ -32,14 +32,13 @@ h1 {
 }
 
 #play{
-  padding:200px;
+  padding-top:20%;
 }
 #play button{
   display:block;
-  /* width: 75%; */
   height:115px;
-  margin:10px auto;
   font-size:30px;
+  margin: 0 auto;
 }
 
 #container2 ,#container3 {
@@ -156,11 +155,10 @@ input{
 }
 
 #round {
-  font-size: 20px;
   width: 500px;
   padding: 0px;
   display: inline-block;
-  margin-top: 235px;
+  margin-top: 20%;
 }
 #round input {
   width: 26%;
@@ -182,4 +180,15 @@ input{
 }
 #refresh:hover{
   background-color:#ddd;
+}
+@media (max-width:500px){
+  h2{
+    font-size:20px;
+  }
+  #round{
+    width:200px;
+  }
+  #matrix .cell{
+    font-size:60px;
+  }
 }
